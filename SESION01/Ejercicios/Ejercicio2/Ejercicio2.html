@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input:invalid {
+      border-color: red;
+    }
+
+    input:valid {
+      border-color: green;
+    }
+
+    .hint {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Registro</h2>
+
+    <label for="nombre">Nombre Completo</label>
+    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50" 
+           placeholder="Ej: Cesar Yana"
+           title="El nombre debe tener entre 3 y 50 caracteres.">
+
+    <label for="email">Correo Electrónico</label>
+    <input type="email" id="email" name="email" required 
+           placeholder="Ej: nombre.apellido@estudiante.ucsm.edu.pe"
+           title="Ingrese un correo valido (nombre.apellido@estudiante.ucsm.edu.pe).">
+
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" required minlength="6" maxlength="12" 
+           placeholder="Entre 6 y 12 caracteres"
+           title="La contraseña debe tener entre 6 y 12 caracteres.">
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" 
+           placeholder="9 dígitos"
+           title="Ingrese un número de 9 dígitos. Ejemplo: 987654321">
+
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" name="edad" required min="18" max="99" 
+           placeholder="Ej: 25"
+           title="Debe tener entre 18 y 99 años.">
+
+    <button type="submit">Registrarse</button>
+  </form>
+
+</body>
+</html>
